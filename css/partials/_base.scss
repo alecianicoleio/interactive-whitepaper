@@ -1,0 +1,88 @@
+/********************************************/
+/*  GENERAL SECTION STYLES                  */
+/********************************************/
+
+section {
+    overflow: hidden;
+    .container {
+        margin: 40px 40px;
+        padding: 0;
+        @include screen-sm {
+            margin: 90px 60px;
+        }
+    }
+}
+
+section, .flex {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+.flex-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.flex-stretch {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+}
+.flex-column {
+    display: flex;
+    flex-direction: column;
+    // flex-wrap: nowrap;
+    justify-content: center;
+    align-items: left;
+}
+
+.bg-primary {
+
+    background: $ifi-primary;
+    background: -moz-linear-gradient(top, $ifi-primary 0%, $ifi-primary-light 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, $ifi-primary 0%, $ifi-primary-light 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, $ifi-primary 0%, $ifi-primary-light 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$ifi-primary', endColorstr='$ifi-primary-light',GradientType=0 ); /* IE6-9 */
+
+    a {
+        color: $white;
+        &:hover,
+        &:focus,
+        &:active {
+            color: $ifi-primary-light;
+        }
+    }
+}
+
+.bg-info { background: $ifi-gray-light; }
+
+.divider {
+    width: 155px;
+    height: 5px;
+    background: $ifi-gray-light;
+    margin: 20px 0 20px 0;
+    clear: both;
+}
+.divider-dark { background: $ifi-gray; }
+.divider-wide {
+    height: 2px;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background: $ifi-primary-dark;
+}
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px;
+}
+.row {
+    @include micro-cf();
+    > div {
+        @include micro-cf();
+    }
+}

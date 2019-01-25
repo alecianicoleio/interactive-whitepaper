@@ -1,0 +1,343 @@
+/********************************************/
+/*  INTRO                                   */
+/********************************************/
+
+#section-intro {
+
+  .gam-logo {
+    max-width: 314px;
+    margin-bottom: 60px;
+  }
+
+  h1 { margin-bottom: 40px; }
+
+  .intro-photo {
+    img { width: 100%; }
+  }
+
+  @include screen-xs {
+    .container { margin-bottom: 0; }
+    .col-sm-4 {
+      width: calc(100% + 80px);
+      padding: 0;
+      margin-right: -20px;
+      margin-left: -20px;
+      margin-top: 60px;
+    }
+    .intro-photo {
+      width: 100%;
+      height: 200px;
+      overflow: hidden;
+      position: relative;
+    }
+  }
+
+  @include screen-sm {
+    h1 span { display: block; }
+    .intro-photo {
+      width: 350px;
+      height: 350px;
+      border-radius: 177px;
+      border: 1px solid $ifi-gray;
+      img {
+          width: 330px;
+          height: 330px;
+          border-radius: 165px;
+      }
+    }
+  }
+
+}
+
+
+
+/********************************************/
+/*  SECTION: 02 | THE RETURN TO NORMAL      */
+/********************************************/
+
+#section-two {
+  .return-charts { margin-top: 30px; }
+  svg { max-width: 300px; }
+
+  @include screen-xs {
+
+  }
+
+}
+
+
+
+/********************************************/
+/*  SECTION: 03                             */
+/********************************************/
+
+.icon-well {
+    position: relative;
+    border: 3px solid $ifi-gray;
+    width: calc(100% - 35px);
+    border-radius: 10px;
+
+    .icon {
+        width: 70px;
+        height: 70px;
+        border-radius: 35px;
+        top: 50%;
+        transform: translateY(-35px);
+        right: -35px;
+        background: $ifi-primary;
+        display: block;
+        position: absolute;
+    }
+
+    p {
+        margin: 30px 65px 30px 30px;
+        padding: 0;
+    }
+
+    @include screen-xs { margin-top: 40px; }
+}
+
+
+
+/********************************************/
+/*  SECTION: 04 CRITERIA                    */
+/********************************************/
+
+#section-four {
+    img { max-width: 450px; }
+}
+
+
+
+/********************************************/
+/*  SECTION: 05                             */
+/********************************************/
+#section-five {
+  h4 { margin-bottom: 40px; }
+
+  .image {
+    max-width: 200px;
+    margin: 0 auto;
+  }
+
+  .icon-container { position: relative; }
+
+  .icon-container > div {
+    padding: 25px 50px;
+    .stat-switch { height: 126px; }
+    .stat {
+      opacity: 1;
+      height: auto;
+      margin: 0;
+      transition: height .5s, opacity .75s;
+    }
+    .definition {
+      opacity: 0;
+      height: 0;
+      overflow: hidden;
+      margin: 0;
+      transition: height .5s, opacity .75s;
+    }
+    &:hover {
+      .stat {
+        opacity: 0;
+        height: 0;
+        overflow: hidden;
+      }
+      .definition {
+        opacity: 1;
+        height: auto;
+      }
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .icon-container > div {
+      padding: 0 15px;
+      width: 20% !important;
+    }
+  }
+
+}
+
+
+
+/********************************************/
+/*  SECTION: 07 | OBSERVATIONS              */
+/********************************************/
+
+// ACCORDION TABS
+.nav-tabs.responsive-tabs {
+  border: 0;
+  display: none;
+  li a {
+    background: $ifi-primary;
+    color: $white;
+    border: 1px solid $ifi-primary;
+    border-bottom-color: transparent;
+  }
+  li.active a {
+    background: $ifi-gray-light;
+    color: $ifi-black;
+    border: 1px solid $ifi-gray-light;
+    border-bottom-color: transparent;
+  }
+}
+
+.responsive-tabs-container .tab-pane {
+  margin-bottom: 15px;
+  background: $ifi-gray-light;
+  @include micro-cf();
+  .col-sm-6 {
+    padding: 0;
+    @include micro-cf();
+  }
+  .row { margin: 30px; }
+  min-height: 300px;
+  @include screen-md {
+    min-height: 300px;
+  }
+}
+
+#profile1 .row { height: 420px;}
+.responsive-tabs-container .accordion-link {
+  display: block;
+  padding: 10px 15px;
+  background-color: $ifi-primary;
+  color: $white;
+  border-radius: 3px;
+  margin-bottom: 10px;
+  &:hover,
+  &:active,
+  &:focus {
+      text-decoration: none;
+      background: $ifi-primary-dark !important;
+  }
+}
+
+@include screen-sm {
+  // Display tabs
+  .responsive-tabs-container .nav-tabs { display: block; }
+  //Hide accordion
+  .responsive-tabs-container .accordion-link { display: none; }
+}
+
+
+/********************************************/
+/*  SECTION: 09                             */
+/********************************************/
+
+#section-nine {
+
+  .lead { margin-bottom: 40px; }
+  h4 { margin: 40px 0; }
+  img { margin-bottom: 20px; }
+  .text-box h5 { margin-top: 50px; }
+
+  @include screen-md {
+    .text-box { height: 224px; }
+    .text-box h5 { margin-top: 0px; }
+  }
+
+}
+
+
+
+/********************************************/
+/*  SECTION: 10 | PORTFOLIO                 */
+/********************************************/
+
+#section-ten {
+  .col-md-6:first-child { margin-bottom: 40px; }
+  .portfolio-chart {
+      max-width: 500px;
+      img { width: 100%; }
+  }
+
+  @include screen-md {
+    .col-md-6:first-child {
+      text-align: right;
+      margin-bottom: 0;
+      .divider {
+        float: right;
+        clear: both;
+        margin-left: calc(100% - 155px);
+      }
+    }
+  }
+}
+
+
+
+/********************************************/
+/*  SECTION: 11 | LEAD CAPTURE              */
+/********************************************/
+#section-eleven {
+
+  .paper-cover {
+    display: block;
+    position: relative;
+    max-width: 300px;
+    margin: 36px 34px 0 34px;
+    img { width: 100%; }
+  }
+
+  .download-form { margin: 20px 40px 40px 40px; }
+
+  .bullets { margin-bottom: 40px; }
+
+  .form-container {
+
+    @include micro-cf();
+    border-radius: 8px;
+    .inner { @include micro-cf(); }
+
+    input {
+      width: 100%;
+      margin: 5px 0;
+      color: $ifi-black;
+      &:focus,
+      &:active {
+        outline: none;
+        background: $ifi-gray-light;
+      }
+    }
+
+    .form-field {
+      padding: 10px;
+      border-radius: 8px;
+      border: 0 !important;
+    }
+
+    .btn {
+      background: transparent;
+      margin-top: 10px;
+      color: $white;
+      text-transform: uppercase;
+      &:hover,
+      &:focus,
+      &:active {
+        background: $white;
+        color: $ifi-primary;
+      }
+    }
+
+  }
+
+  @include screen-sm {
+    .paper-cover { margin: 40px 0 0 34px; }
+    .download-form { margin: 40px 40px 40px 0px; }
+  }
+}
+
+.bullets span { display: block; }
+
+
+
+/********************************************/
+/*  SECTION: 12 | FOOTER              */
+/********************************************/
+
+#footer {
+  .copy { margin-top: 30px; }
+}

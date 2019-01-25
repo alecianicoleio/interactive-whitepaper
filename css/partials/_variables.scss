@@ -1,0 +1,30 @@
+/********************************************/
+/*  VARIABLES                               */
+/********************************************/
+
+$ifi-primary: #DD5008;
+$ifi-primary-dark: darken($ifi-primary,10%);
+$ifi-primary-light: lighten($ifi-primary,10%);
+
+$ifi-gray-light: #F0F0F0; // Use for section backgrounds
+$ifi-gray: #c8c8c8;
+$ifi-gray-dark: #AAAAAA;
+$ifi-gray-darkest: #414141;
+$ifi-black: #414141;
+$white: #fff;
+
+// Chart colors
+$ifi-primary-lt: #71C2EC;
+$ifi-gold: #EA973F;
+$ifi-teal: #3FB090;
+$ifi-brown: #9A4740;
+$ifi-yellow: #F6C345;
+$ifi-green: #98C455;
+$ifi-gray: #A8A9AC;
+$ifi-blue: #0077C4;
+
+// Breakpoints
+$screen-xs: 767px;
+$screen-sm: 768px;
+$screen-md: 992px;
+$screen-lg: 1200px;

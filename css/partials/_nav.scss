@@ -1,0 +1,111 @@
+/********************************************/
+/*  NAV                                     */
+/********************************************/
+
+#pg-vertical-nav ul { list-style-type: none; }
+/* No Touch devices */
+
+.no-touch {
+    #pg-vertical-nav {
+
+        position: fixed;
+        right: 20px;
+        @include screen-lg { right: 40px; }
+        top: 50%;
+        bottom: auto;
+        -webkit-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        -o-transform: translateY(-50%);
+        transform: translateY(-50%);
+        z-index: 1;
+
+        li {
+            text-align: right;
+
+        }
+
+
+        li a {
+            display: inline-block;
+            height: 30px;
+            /* prevent weird movements on hover when you use a CSS3 transformation - webkit browsers */
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+        }
+
+        a:after {
+          content: "";
+          display: table;
+          clear: both;
+        }
+
+        a span {
+          float: right;
+          display: inline-block;
+          height: 18px;
+          -webkit-transform: scale(1.0);
+          -moz-transform: scale(1.0);
+          -ms-transform: scale(1.0);
+          -o-transform: scale(1.0);
+          transform: scale(1.0);
+        }
+
+        a:hover span {
+          -webkit-transform: scale(1.5);
+          -moz-transform: scale(1.5);
+          -ms-transform: scale(1.5);
+          -o-transform: scale(1.5);
+          transform: scale(1.5);
+        }
+
+        a:hover .pg-label {
+          opacity: 1;
+        }
+        a.is-selected .pg-dot {
+          background-color: white;
+          border: 2px solid $ifi-gray-darkest;
+        }
+        .pg-dot {
+            position: relative;
+            /* we set a top value in order to align the dot with the label. If you change label's font, you may need to change this top value*/
+            top: 9px;
+            height: 12px;
+            width: 12px;
+            border-radius: 50%;
+            background-color: $ifi-gray-darkest;
+            -webkit-transition: -webkit-transform 0.2s, background-color 0.5s;
+            -moz-transition: -moz-transform 0.2s, background-color 0.5s;
+            transition: transform 0.2s, background-color 0.5s;
+            -webkit-transform-origin: 50% 50%;
+            -moz-transform-origin: 50% 50%;
+            -ms-transform-origin: 50% 50%;
+            -o-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+        }
+        .pg-label {
+            position: relative;
+            top: 6px;
+            margin-right: 15px;
+            padding: .4em .5em;
+            color: $ifi-gray-darkest;
+            background: white;
+            font-size: 14px;
+            font-size: 0.875rem;
+            -webkit-transition: -webkit-transform 0.2s, opacity 0.2s;
+            -moz-transition: -moz-transform 0.2s, opacity 0.2s;
+            transition: transform 0.2s, opacity 0.2s;
+            opacity: 0;
+            -webkit-transform-origin: 100% 50%;
+            -moz-transform-origin: 100% 50%;
+            -ms-transform-origin: 100% 50%;
+            -o-transform-origin: 100% 50%;
+            transform-origin: 100% 50%;
+        }
+   }
+}
+
+/* Touch devices */
+.touch #pg-vertical-nav {
+  display: none;
+}

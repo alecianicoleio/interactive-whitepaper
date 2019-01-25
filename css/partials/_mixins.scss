@@ -1,0 +1,42 @@
+/********************************************/
+/*  MIXINS                                  */
+/********************************************/
+
+@mixin font-size($sizeValue: 1.6) {
+  font-size: ($sizeValue * 10) + px;
+  font-size: $sizeValue + rem;
+}
+
+@mixin micro-cf(){
+    *zoom: 1;
+    &:after { clear: both; }
+    &:before,
+    &:after {
+        content: " ";
+        display: table;
+    }
+}
+
+@mixin screen-xs {
+  @media (max-width: #{$screen-xs}) {
+    @content;
+  }
+}
+
+@mixin screen-sm {
+  @media (min-width: #{$screen-sm}) {
+    @content;
+  }
+}
+
+@mixin screen-md {
+  @media (min-width: #{$screen-md}) {
+    @content;
+  }
+}
+
+@mixin screen-lg {
+  @media (min-width: #{$screen-lg}) {
+    @content;
+  }
+}

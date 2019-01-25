@@ -1,0 +1,316 @@
+
+/********************************************/
+/*  SVG COLOR CLASSES                       */
+/********************************************/
+
+.bg-primary-dark { fill: $ifi-primary-dark; }
+.bg-white { fill: $white; }
+.bg-gray-light { fill: $ifi-gray; }
+.bg-gray-med { fill: $ifi-gray-darkest; }
+.bg-gray-dark { fill: $ifi-black; }
+.bg-primary { fill: $ifi-primary; }
+
+
+
+/********************************************/
+/*  CHAPTER ONE SVGS                        */
+/********************************************/
+
+#returns-MSCI-Emerging.inview  {
+    .line-gray-light {
+        stroke-dasharray: 440;
+        stroke-dashoffset: 440;
+        // ANIMATION
+        animation: fill-bar 1.5s;
+        animation-fill-mode: forwards;
+        animation-delay: 500ms;
+    }
+    @keyframes fill-bar {
+        0% {
+            stroke-dasharray: 440;
+            stroke-dashoffset: 440;
+        }
+        100% {
+            stroke-dashoffset: 0;
+        }
+    }
+}
+
+#returns-MSCI.inview  {
+    .line-gray-light {
+        stroke-dasharray: 540;
+        stroke-dashoffset: 540;
+        // ANIMATION
+        animation: fill-bar 1.5s;
+        animation-fill-mode: forwards;
+        animation-delay: 500ms;
+    }
+    @keyframes fill-bar {
+        0% {
+            stroke-dasharray: 540;
+            stroke-dashoffset: 540;
+        }
+        100% {
+            stroke-dashoffset: 0;
+        }
+    }
+}
+
+#returns-SAP.inview {
+    .line-gray-light {
+        stroke-dasharray: 574;
+        stroke-dashoffset: 574;
+        // ANIMATION
+        animation: fill-bar 1.5s;
+        animation-fill-mode: forwards;
+        animation-delay: 500ms;
+    }
+    @keyframes fill-bar {
+        0% {
+            stroke-dasharray: 650;
+            stroke-dashoffset: 650;
+        }
+        100% {
+            stroke-dashoffset: 0;
+        }
+    }
+}
+
+
+
+/********************************************/
+/*  CHAPTER TWO SVGS: RADIAL BAR CHARTS     */
+/********************************************/
+
+@keyframes animate-developed-markets {
+  0%        { opacity: 0; }
+  100%      { opacity: 1; }
+}
+
+#developed-markets.inview {
+
+    #bar-01, #bar-02, #bar-03, #bar-04, #bar-05,
+    #bar-06, #bar-07, #bar-08, #bar-09, #bar-10,
+    #bar-11, #bar-12, #bar-13, #bar-14, #bar-15,
+    #bar-16, #bar-17, #bar-18, #bar-19, #bar-20,
+    #bar-21, #bar-22, #bar-23, #bar-24, #bar-25,
+    #bar-26, #bar-27, #bar-28, #bar-29, #bar-30,
+    #bar-31, #bar-32, #bar-33, #bar-34, #bar-35,
+    #bar-36, #bar-37, #bar-38, #bar-39, #bar-40,
+    #bar-41, #bar-42, #bar-43, #bar-44, #bar-45,
+    #bar-46, #bar-47, #bar-48, #bar-49 {
+        opacity: 0;
+        animation: animate-developed-markets .05s;
+        animation-fill-mode: forwards;
+    }
+
+    #bar-01 { animation-delay: 0325ms }
+    #bar-02 { animation-delay: 0350ms }
+    #bar-03 { animation-delay: 0375ms }
+    #bar-04 { animation-delay: 0400ms }
+    #bar-05 { animation-delay: 0425ms }
+    #bar-06 { animation-delay: 0450ms }
+    #bar-07 { animation-delay: 0475ms }
+    #bar-08 { animation-delay: 0500ms }
+    #bar-09 { animation-delay: 0525ms }
+    #bar-10 { animation-delay: 0550ms }
+    #bar-11 { animation-delay: 0575ms }
+    #bar-12 { animation-delay: 0600ms }
+    #bar-13 { animation-delay: 0625ms }
+    #bar-14 { animation-delay: 0650ms }
+    #bar-15 { animation-delay: 0675ms }
+    #bar-16 { animation-delay: 0700ms }
+    #bar-17 { animation-delay: 0725ms }
+    #bar-18 { animation-delay: 0750ms }
+    #bar-19 { animation-delay: 0775ms }
+    #bar-20 { animation-delay: 0800ms }
+    #bar-21 { animation-delay: 0825ms }
+    #bar-22 { animation-delay: 0850ms }
+    #bar-23 { animation-delay: 0875ms }
+    #bar-24 { animation-delay: 0900ms }
+    #bar-25 { animation-delay: 0925ms }
+    #bar-26 { animation-delay: 0950ms }
+    #bar-27 { animation-delay: 0975ms }
+    #bar-28 { animation-delay: 1000ms }
+    #bar-29 { animation-delay: 1025ms }
+    #bar-30 { animation-delay: 1050ms }
+    #bar-31 { animation-delay: 1075ms }
+    #bar-32 { animation-delay: 1100ms }
+    #bar-33 { animation-delay: 1125ms }
+    #bar-34 { animation-delay: 1150ms }
+    #bar-35 { animation-delay: 1175ms }
+    #bar-36 { animation-delay: 1200ms }
+    #bar-37 { animation-delay: 1225ms }
+    #bar-38 { animation-delay: 1250ms }
+    #bar-39 { animation-delay: 1275ms }
+    #bar-40 { animation-delay: 1300ms }
+    #bar-41 { animation-delay: 1325ms }
+    #bar-42 { animation-delay: 1350ms }
+    #bar-43 { animation-delay: 1375ms }
+    #bar-44 { animation-delay: 1400ms }
+    #bar-45 { animation-delay: 1425ms }
+    #bar-46 { animation-delay: 1450ms }
+    #bar-47 { animation-delay: 1475ms }
+    #bar-48 { animation-delay: 1500ms }
+    #bar-49 { animation-delay: 1525ms }
+}
+
+@keyframes animate-emerging-markets {
+  0%        { opacity: 0; }
+  100%      { opacity: 1; }
+}
+
+#emerging-markets.inview {
+    #bar-01, #bar-02, #bar-03, #bar-04, #bar-05,
+    #bar-06, #bar-07, #bar-08, #bar-09, #bar-10,
+    #bar-11, #bar-12, #bar-13, #bar-14, #bar-15,
+    #bar-16, #bar-17, #bar-18, #bar-19, #bar-20,
+    #bar-21, #bar-22, #bar-23, #bar-24, #bar-25,
+    #bar-26, #bar-27, #bar-28, #bar-29, #bar-30,
+    #bar-31, #bar-32, #bar-33, #bar-34, #bar-35,
+    #bar-36, #bar-37, #bar-38, #bar-39, #bar-40,
+    #bar-41, #bar-42, #bar-43, #bar-44, #bar-45,
+    #bar-46, #bar-47, #bar-48, #bar-49 {
+        opacity: 0;
+        animation: animate-emerging-markets .05s;
+        animation-fill-mode: forwards;
+    }
+    #bar-01 { animation-delay: 0325ms }
+    #bar-02 { animation-delay: 0350ms }
+    #bar-03 { animation-delay: 0375ms }
+    #bar-04 { animation-delay: 0400ms }
+    #bar-05 { animation-delay: 0425ms }
+    #bar-06 { animation-delay: 0450ms }
+    #bar-07 { animation-delay: 0475ms }
+    #bar-08 { animation-delay: 0500ms }
+    #bar-09 { animation-delay: 0525ms }
+    #bar-10 { animation-delay: 0550ms }
+    #bar-11 { animation-delay: 0575ms }
+    #bar-12 { animation-delay: 0600ms }
+    #bar-13 { animation-delay: 0625ms }
+    #bar-14 { animation-delay: 0650ms }
+    #bar-15 { animation-delay: 0675ms }
+    #bar-16 { animation-delay: 0700ms }
+    #bar-17 { animation-delay: 0725ms }
+    #bar-18 { animation-delay: 0750ms }
+    #bar-19 { animation-delay: 0775ms }
+    #bar-20 { animation-delay: 0800ms }
+    #bar-21 { animation-delay: 0825ms }
+    #bar-22 { animation-delay: 0850ms }
+    #bar-23 { animation-delay: 0875ms }
+    #bar-24 { animation-delay: 0900ms }
+    #bar-25 { animation-delay: 0925ms }
+    #bar-26 { animation-delay: 0950ms }
+    #bar-27 { animation-delay: 0975ms }
+    #bar-28 { animation-delay: 1000ms }
+    #bar-29 { animation-delay: 1025ms }
+    #bar-30 { animation-delay: 1050ms }
+    #bar-31 { animation-delay: 1075ms }
+    #bar-32 { animation-delay: 1100ms }
+    #bar-33 { animation-delay: 1125ms }
+    #bar-34 { animation-delay: 1150ms }
+    #bar-35 { animation-delay: 1175ms }
+    #bar-36 { animation-delay: 1200ms }
+    #bar-37 { animation-delay: 1225ms }
+    #bar-38 { animation-delay: 1250ms }
+    #bar-39 { animation-delay: 1275ms }
+    #bar-40 { animation-delay: 1300ms }
+    #bar-41 { animation-delay: 1325ms }
+    #bar-42 { animation-delay: 1350ms }
+    #bar-43 { animation-delay: 1375ms }
+    #bar-44 { animation-delay: 1400ms }
+    #bar-45 { animation-delay: 1425ms }
+    #bar-46 { animation-delay: 1450ms }
+    #bar-47 { animation-delay: 1475ms }
+    #bar-48 { animation-delay: 1500ms }
+ }
+
+
+
+ /********************************************/
+ /*  CHAPTER TWO SVGS: HORIZONTAL BAR CHARTS */
+ /********************************************/
+
+.inview {
+
+    .line-gray-light {
+        stroke: $ifi-gray;
+        fill: none;
+        stroke-miterlimit: 10;
+        stroke-width: 7px;
+    }
+
+    .line-primary {
+        stroke: $ifi-primary;
+        fill: none;
+        stroke-miterlimit: 10;
+        stroke-width: 7px;
+    }
+
+    .label-group {
+        opacity: 0;
+        transform-origin: center;
+        transform: scale(0.5);
+        // ANIMATION
+        animation: fade-in-label 1s;
+        animation-fill-mode: forwards;
+        animation-delay: 1500ms;
+    }
+
+    .bar-horiz {
+        transform: scaleX(0.5);
+        opacity: 0;
+        transform-origin: top left;
+        animation: horiz-bar 1000ms;
+        animation-fill-mode: forwards;
+        animation-delay: 500ms;
+    }
+
+    .bar-horiz-labels { opacity: 0; }
+
+    .bar-horiz-percent {
+        transform: scaleX(0.5);
+        opacity: 0;
+        animation: horiz-bar 500ms;
+        animation-fill-mode: forwards;
+        animation-delay: 1000ms;
+    }
+
+    .bar-horiz-labels {
+        opacity: 0;
+        animation: show 500ms;
+        animation-fill-mode: forwards;
+        animation-delay: 1200ms;
+    }
+
+}
+
+@keyframes fade-in-label {
+    0% {
+        opacity: 0;
+        transform: scale(0.7);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1.0);
+    }
+}
+
+@keyframes show {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes horiz-bar {
+    0% {
+        opacity: 0;
+        transform: scaleX(0.5);
+    }
+    100% {
+        opacity: 1;
+        transform: scaleX(1.0);
+    }
+}
+
+.paused-animation { visibility: hidden; }
+.inview { visibility: visible; }

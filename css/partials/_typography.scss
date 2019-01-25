@@ -1,0 +1,102 @@
+/********************************************/
+/*  TYPOGRAPHY.                             */
+/********************************************/
+
+@import url('https://fonts.googleapis.com/css?family=Heebo:300,400,500,700');
+html { font-size: 62.5%; }
+body {
+    font-family:    'Heebo', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    @include font-size(1.5);
+    font-weight:    400;
+    line-height:    1.4;
+    overflow-x: hidden;
+    color: $ifi-black;
+}
+
+h1 {
+    @include font-size(3);
+    font-weight: 300;
+    @include screen-sm { @include font-size(4.8); }
+}
+h2, .header-h2 {
+   @include font-size(3);
+    font-weight:    400;
+    @include screen-sm { @include font-size(4.8); }
+}
+h3, .header-h3 {
+    @include font-size(2.5);
+    font-weight:    400;
+    @include screen-sm { @include font-size(3.8); }
+}
+h4, .header-h4 {
+    @include font-size(2);
+    font-weight: 300;
+    @include screen-sm { @include font-size(2.8); }
+}
+h5, .header-h5 {
+    @include font-size(1.9);
+    font-weight: 500;
+}
+
+.display-1 {
+  text-transform: uppercase;
+  color: $ifi-gray;
+  @include font-size(1.9);
+  @include screen-sm { @include font-size(2.8); }
+  font-weight: 300;
+}
+
+.lead {
+    @include font-size(1.9);
+    font-weight: 400;
+}
+
+p { margin-bottom: 20px; }
+
+.light { font-weight: 300; }
+.primary-text { color: $ifi-primary; }
+.bold { font-weight: 700; }
+
+.btn-outline-light {
+    border: 2px solid $white;
+    @include font-size(1.5);
+    padding: 8px 20px;
+    color: $white;
+    border-radius: 20px;
+    font-weight: 400;
+    &:hover,
+    &:focus,
+    &:active {
+        background: $white;
+        color: $ifi-primary-light !important;
+        font-weight: 500;
+    }
+}
+
+.btn-outline-primary {
+    border: 2px solid $ifi-primary;
+    @include font-size(1.5);
+    padding: 8px 20px;
+    color: $ifi-primary;
+    border-radius: 20px;
+    font-weight: 400;
+    &:hover,
+    &:focus,
+    &:active {
+        background: $ifi-primary;
+        color: $white !important;
+        font-weight: 500;
+    }
+}
+
+// MAX WIDTH ON PARAGRAPHS
+.tiny { @include screen-sm { max-width: 360px; } }
+.skinny { max-width: 800px; }
+
+// MOBILE-ONLY ALIGNMENT
+@include screen-xs {
+    .text-right { text-align: left; }
+    .pull-right { float: none !important; }
+}

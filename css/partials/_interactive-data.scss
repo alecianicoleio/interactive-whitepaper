@@ -1,0 +1,152 @@
+/********************************************/
+/*  INTERACTIVE DATA TABLE                  */
+/********************************************/
+
+.tab-content .row {
+    .col-sm-6 {
+        @include micro-cf();
+        .table-container {
+            position: relative;
+        }
+    }
+    .col-sm-6:first-child {
+        .table-container {
+            margin: 30px 20px 50px 20px;
+            @include screen-sm {
+                margin: 30px 30px 30px 15px;
+            }
+        }
+    }
+    .col-sm-6:last-child {
+        .table-container {
+            margin: 50px 20px 40px 20px;
+            @include screen-sm {
+                 margin: 30px 15px 30px 30px;
+            }
+        }
+    }
+}
+
+.ifi-data-table {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    .data-row {
+        height: calc( 20% - 4px );
+        background: #FFFFFF;
+        width: 100%;
+        margin-bottom: 4px;
+    }
+    @include screen-md {
+        height: 250px;
+    }
+}
+
+.row-label,
+.column-label {
+  position: absolute;
+  display: inline-block;
+  width: 30px;
+  font-size: 12px;
+  color: $ifi-gray;
+}
+
+.row-label {
+  left: -35px;
+  text-align: right;
+}
+
+.column-label {
+  bottom: -20px;
+  text-align: left;
+}
+
+.table-title,
+.row-title,
+.column-title {
+    position: absolute;
+}
+
+.table-title {
+    top: -30px;
+    width: 100%;
+    text-align: center;
+    font-weight: 500;
+    color: $ifi-primary;
+}
+.row-title {
+    height: 20px;
+    width: 200px;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-10px) rotate(90deg);
+    right: -115px;
+}
+.column-title {
+    bottom: -45px;
+    width: 100%;
+    text-align: center;
+}
+
+.dot {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 8px;
+  transform: translate(-8px, -8px);
+  z-index: 1000;
+}
+
+@mixin top-x {
+  @for $i from -100 through 100 {
+    $unit: '%';
+    .top-#{$i} {
+      top: #{$i}#{$unit};
+    }
+  }
+}
+
+@mixin top-y {
+  @for $i from -100 through 100 {
+    $unit: '%';
+    .left-#{$i} {
+      left: #{$i}#{$unit};
+    }
+  }
+}
+
+@include top-x;
+
+@include top-y;
+
+.tag {
+    font-size: 14px;
+    text-align: center;
+    color: $white;
+    display: inline-block;
+    padding: 2px 10px;
+    border-radius: 15px;
+    margin: 2px 0 4px 0;
+}
+
+.trackingerror, .dot.primary-lt { background: $ifi-primary-lt; }
+.beta, .dot.gold { background: $ifi-gold; }
+.rsquared, .dot.teal { background: $ifi-teal; }
+.updown, .dot.brown { background: $ifi-brown; }
+.highactive, .dot.yellow { background: $ifi-yellow; }
+.highconviction, .dot.primary { background: $ifi-primary; }
+.fulluniverse, .dot.gray { background: $ifi-black; }
+.benchmark, .dot.red { background: $ifi-blue; }
+.etf, .dot.green { background: $ifi-green; }
+.dot.inactive { opacity: 0; }
+.tag.inactive { background: $ifi-gray; }
+.tag:hover { cursor: pointer; }
+.trackingerror.inactive:hover { background: $ifi-primary-lt; }
+.beta.inactive:hover{ background: $ifi-gold; }
+.rsquared.inactive:hover { background: $ifi-teal; }
+.updown.inactive:hover { background: $ifi-brown; }
+.highactive.inactive:hover { background: $ifi-yellow; }
+.highconviction.inactive:hover { background: $ifi-primary; }
+.fulluniverse.inactive:hover { background: $ifi-black; }
+.benchmark.inactive:hover { background: $ifi-blue; }
+.etf.inactive:hover { background: $ifi-green; }
